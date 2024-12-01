@@ -1,10 +1,11 @@
 from collections import Counter
 
+
 # get lists out of the file.
-def list_extractor():
+def list_extractor() -> tuple[list[int], list[int]]:
     # initialize empty left and right lists
-    left_list = []
-    right_list = []
+    left_list: list[int] = []
+    right_list: list[int] = []
 
     # read each line of input.txt in the same folder as this file
     with open("01/input.txt") as f:
@@ -39,6 +40,7 @@ def part1():
 
     print("part 1 is: ", sum)
 
+
 def part2():
     # so I read the story as "value of number" x "right count" x "left count"
 
@@ -46,11 +48,11 @@ def part2():
     left_list, right_list = list_extractor()
 
     ## count it all up. note - Counter gives 0 instead of errors on failed lookups.
-    left_counter = Counter(left_list)
-    right_counter = Counter(right_list)
+    left_counter: Counter[int] = Counter(left_list)
+    right_counter: Counter[int] = Counter(right_list)
 
     # init a sum
-    sum = 0
+    sum: int = 0
 
     # go thru everything in left list
     for entry in left_counter:
@@ -60,6 +62,7 @@ def part2():
     # no need to go thru right as well, since it would be *0 with left.
 
     print("part 2 is: ", sum)
+
 
 part1()
 part2()
