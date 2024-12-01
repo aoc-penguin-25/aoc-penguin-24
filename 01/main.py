@@ -20,7 +20,7 @@ def list_extractor():
     return left_list, right_list
 
 
-## 
+# solves for part 1
 def part1():
     ## get lists
     left_list, right_list = list_extractor()
