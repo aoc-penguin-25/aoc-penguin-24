@@ -1,14 +1,17 @@
+"""Main solving AoC2024 Day 1"""
+
 from collections import Counter
 
 
-# get lists out of the file.
 def list_extractor() -> tuple[list[int], list[int]]:
+    """Get lists out of the file."""
+
     # initialize empty left and right lists
     left_list: list[int] = []
     right_list: list[int] = []
 
     # read each line of input.txt in the same folder as this file
-    with open("01/input.txt") as f:
+    with open("01/input.txt", encoding="utf-8") as f:
         lines = f.readlines()
         for line in lines:
             # extract two integers from a line of text
@@ -21,8 +24,9 @@ def list_extractor() -> tuple[list[int], list[int]]:
     return left_list, right_list
 
 
-# solves for part 1
 def part1():
+    """Solve for part 1."""
+
     ## get lists
     left_list, right_list = list_extractor()
 
@@ -31,17 +35,19 @@ def part1():
     right_list.sort()
 
     # initialize the sum counter
-    sum = 0
+    sum_so_far = 0
     # lazy incantation to iterate over the two lists zippered up.
     # really trusting that they're the same length.
     for left, right in zip(left_list, right_list):
         # add the diff between them to the sum.
-        sum += abs(left - right)
+        sum_so_far += abs(left - right)
 
-    print("part 1 is: ", sum)
+    print("part 1 is: ", sum_so_far)
 
 
 def part2():
+    """Solve for part 2."""pylint
+
     # so I read the story as "value of number" x "right count" x "left count"
 
     ## get lists
