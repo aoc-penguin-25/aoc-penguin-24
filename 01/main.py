@@ -46,7 +46,7 @@ def part1():
 
 
 def part2():
-    """Solve for part 2."""pylint
+    """Solve for part 2."""
 
     # so I read the story as "value of number" x "right count" x "left count"
 
