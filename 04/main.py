@@ -2,7 +2,7 @@ xmas = "XMAS"
 
 xmas_count = 0
 
-def rotate_text(lines:list[str]):
+def rotate_text(lines:list[str]) -> list[str]:
     row_count = len(lines)
     col_count = len(lines[0])
     if row_count != col_count:
@@ -11,7 +11,7 @@ def rotate_text(lines:list[str]):
     return list(map("".join, zip(*lines[::-1])))
 
 with open("04/input.txt", encoding="utf-8") as f:
-    lines:list[str] = f.read().splitlines()
+    lines = f.read().splitlines()
     row_count = len(lines)
     col_count = len(lines[0])
     if row_count != col_count:
@@ -58,7 +58,7 @@ x_mas_count = 0
 a_count = 0
 
 with open("04/input.txt", encoding="utf-8") as f:
-    lines:list[str] = f.read().splitlines()
+    lines = f.read().splitlines()
     for line in lines:
         print(line)
     row_count = len(lines)
