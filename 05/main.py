@@ -1,5 +1,4 @@
 from collections import defaultdict
-from turtle import update
 
 rule_dict: dict[int, dict[int,bool]] = defaultdict(lambda: defaultdict(lambda: False))
 
