@@ -24,7 +24,7 @@ with open("06/input.txt", encoding="utf-8") as f:
     next_col: int = cur_col + facing[1]
     while(next_row < len(grid[0]) and next_row >= 0 and next_col < len(grid) and next_col >= 0):
         # leave footsteps
-        print(cur_row, cur_col)
+        # print(cur_row, cur_col)
         if grid[next_row][next_col] == '#':
             # turn right
             facing = next(directions)
